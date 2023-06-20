@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Barco">
+  <ClassDiagramComponents>
+    <Class name="AlquilerAmarres" package="Barco" visibility="public" xPosition="37.0" yPosition="423.0">
+      <Fields>
+        <Field name="nombreCliente" type="String" visibility="private"/>
+        <Field name="documentoCliente" type="String" visibility="private"/>
+        <Field name="fechaInicio" type="LocalDate" visibility="private"/>
+        <Field name="fechaDevolucion" type="LocalDate" visibility="private"/>
+        <Field name="posicionAmarre" type="int" visibility="private"/>
+        <Field name="barco" type="Barco" visibility="private"/>
+        <Field name="leer" type="Scanner" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombreCliente"/>
+          <Argument type="String" name="documentoCliente"/>
+          <Argument type="LocalDate" name="fechaInicio"/>
+          <Argument type="LocalDate" name="fechaDevolucion"/>
+          <Argument type="int" name="posicionAmarre"/>
+          <Argument type="Barco" name="barco"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombreCliente" returnType="String" visibility="public"/>
+        <Method name="setNombreCliente" returnType="void" visibility="public">
+          <Argument type="String" name="nombreCliente"/>
+        </Method>
+        <Method name="getDocumentoCliente" returnType="String" visibility="public"/>
+        <Method name="setDocumentoCliente" returnType="void" visibility="public">
+          <Argument type="String" name="documentoCliente"/>
+        </Method>
+        <Method name="getFechaInicio" returnType="LocalDate" visibility="public"/>
+        <Method name="setFechaInicio" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="fechaInicio"/>
+        </Method>
+        <Method name="getFechaDevolucion" returnType="LocalDate" visibility="public"/>
+        <Method name="setFechaDevolucion" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="fechaDevolucion"/>
+        </Method>
+        <Method name="getPosicionAmarre" returnType="int" visibility="public"/>
+        <Method name="setPosicionAmarre" returnType="void" visibility="public">
+          <Argument type="int" name="posicionAmarre"/>
+        </Method>
+        <Method name="getBarco" returnType="Barco" visibility="public"/>
+        <Method name="setBarco" returnType="void" visibility="public">
+          <Argument type="Barco" name="barco"/>
+        </Method>
+        <Method name="crearAlquiler" returnType="AlquilerAmarres" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Barco" package="Barco" visibility="public" xPosition="50.0" yPosition="13.0">
+      <Fields>
+        <Field name="matricula" type="String" visibility="protected"/>
+        <Field name="eslora" type="double" visibility="protected"/>
+        <Field name="anioFabricacion" type="int" visibility="protected"/>
+        <Field name="leer" type="Scanner" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="matricula"/>
+          <Argument type="double" name="eslora"/>
+          <Argument type="int" name="anioFabricacion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMatricula" returnType="String" visibility="public"/>
+        <Method name="setMatricula" returnType="void" visibility="public">
+          <Argument type="String" name="matricula"/>
+        </Method>
+        <Method name="getEslora" returnType="double" visibility="public"/>
+        <Method name="setEslora" returnType="void" visibility="public">
+          <Argument type="double" name="eslora"/>
+        </Method>
+        <Method name="getAnioFabricacion" returnType="int" visibility="public"/>
+        <Method name="setAnioFabricacion" returnType="void" visibility="public">
+          <Argument type="int" name="anioFabricacion"/>
+        </Method>
+        <Method name="crearBarco" returnType="Barco" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="calcularModulo" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="BarcoMotor" package="Barco" visibility="public" xPosition="1027.0" yPosition="23.0">
+      <Fields>
+        <Field name="potenciaCV" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="matricula"/>
+          <Argument type="double" name="eslora"/>
+          <Argument type="int" name="anioFabricacion"/>
+          <Argument type="int" name="potenciaC"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="crearBarcoMotor" returnType="BarcoMotor" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="calcularModulo" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="NewMain" package="Barco" visibility="public" xPosition="1294.0" yPosition="239.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Velero" package="Barco" visibility="public" xPosition="995.0" yPosition="423.0">
+      <Fields>
+        <Field name="numeroMastiles" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="matricula"/>
+          <Argument type="double" name="eslora"/>
+          <Argument type="int" name="anioFabricacion"/>
+          <Argument type="int" name="numeroMastiles"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="crearVelero" returnType="Velero" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="calcularModulo" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Yate" package="Barco" visibility="public" xPosition="439.0" yPosition="23.0">
+      <Fields>
+        <Field name="potenciaCV" type="int" visibility="private"/>
+        <Field name="numeroCamarotes" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="matricula"/>
+          <Argument type="double" name="eslora"/>
+          <Argument type="int" name="anioFabricacion"/>
+          <Argument type="int" name="potenciaCV"/>
+          <Argument type="int" name="numeroCamarotes"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="crearYate" returnType="Yate" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="calcularModulo" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Barco.Yate" target="Barco.Barco"/>
+    <IsRelation name="is" source="Barco.Velero" target="Barco.Barco"/>
+    <IsRelation name="is" source="Barco.BarcoMotor" target="Barco.Barco"/>
+    <UseRelation source="Barco.BarcoMotor" target="Barco.BarcoMotor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Barco.Barco" target="Barco.Barco" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="barco" source="Barco.AlquilerAmarres" target="Barco.Barco" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Barco.Yate" target="Barco.Yate" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Barco.AlquilerAmarres" target="Barco.AlquilerAmarres" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Barco.Velero" target="Barco.Velero" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Barco.AlquilerAmarres" target="Barco.Barco" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
